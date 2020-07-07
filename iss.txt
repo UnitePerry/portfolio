@@ -1,1 +1,0 @@
-#bug_fixed: text got blurred in chrome because of tranform=translate
