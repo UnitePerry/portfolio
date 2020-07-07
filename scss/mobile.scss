@@ -1,0 +1,313 @@
+@use 'com';
+//css properties with prewritten -webkit-,-moz-,-o-,-khtml-,-ms- prefixes
+/*
+Mobile (Smartphone) max-width: 480px. Low Resolution Tablets and ipads max-width: 767px.
+Tablets Ipads portrait mode max-width:1024px. Desktops max-width:1280px.
+*/
+:root{
+	/*variables*/
+	--black : #000000;
+	--dark:#222831;
+	--grey: #393e46;
+	--orange:#d65a31;
+    --white: #eeeeee;
+    --green: #32e0c4;
+}
+input,
+textarea,
+button,
+select,
+a,div {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+//variables
+$black:#000000;
+$dark:#222831;
+$grey: #393e46;
+$light-grey:#474a50;
+$orange:#d65a31;
+$white:#eeeeee;
+$green:#32e0c4;
+$dgreen: #2aa08c;
+
+$col1:8.33% ;
+$col2:16.66%;
+$col3:25%   ;
+$col4:33.33%;
+$col5:41.66%;
+$col6:50%   ;
+$col7:58.33%;
+$col8:66.66%;
+$col9:75%   ;
+$col10:83.33%;
+$col11:91.66%;
+$col12:100%  ;
+//end of variables
+//Extentions:
+%normal-text-d{
+    //normal text for dark mode
+    text-decoration: none;
+    color: $white;
+    font-size: 1.1em;
+}
+//end of extensions
+*{
+    //changing the defaults
+    box-sizing : border-box;
+    padding : 0px;
+    margin : 0px;
+}
+
+body,html{
+	background-color: $dark;
+    min-height: 100vh;
+    height: 100%;
+    font-size: 1.1em;
+    color:white;
+    font-family: IRANSans;
+    text-align: justify;
+    line-height: 2;
+    font-size: 18px;
+    direction: rtl;
+    word-wrap: anywhere;
+    word-break: break-word;
+}
+
+a{
+    @extend %normal-text-d;
+    cursor: pointer;
+}
+
+div.container{
+    padding: 20px;
+    border : 1px;
+    display: block;
+    min-height: 100vh;
+    width: 100%;
+    div#open-menu{
+        @extend %normal-text-d;
+        float: right;
+        display: block;
+        height: 22px;
+        width: 22px;
+        display: block;
+        margin-left: 10px;
+        cursor: pointer;
+        text-align: center;
+        i{
+            font-size: 18px;
+            width:18px;
+            height:18px;
+        }
+    }
+    > div#header{
+        width: 100%;
+        border-bottom: 4px $orange solid;
+        background-image: linear-gradient(to top,$orange,rgba(0,0,0,0) 10%);
+        h2{
+            float: left;
+        }
+    }
+}
+
+div#menu{
+    @include com.transition(0.5s);
+    z-index:2;//to be on top of div.overlay which has z index of one
+    overflow-x: hidden;
+    display: block;
+    top: 0px;
+	background-color: $grey;
+    width:0%;
+    min-height: 100vh;
+    height: 100%;
+    position: fixed;
+    div#close-menu{
+        @extend %normal-text-d;
+        position: relative;
+        display: block;
+        top:2px;
+        right:4px;
+        width: 31px;
+        height: 31px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+}
+
+ul#menu-ul{
+    white-space: nowrap;
+	color:$white;
+    list-style: none;
+    text-align: center;
+    margin : 0px;
+    a{
+        @include com.userselect(none);
+        @include com.transition(0.5s);
+        overflow: hidden;
+        text-align: center;
+        padding: 10px;
+        display: block;
+    }
+    a:active{
+        background-color: rgba(214,90,49,0.5);
+    }
+}
+ul#menu-ul li{
+    overflow: hidden;
+    background-color: inherit;
+    display: block;
+    width:100%;
+    min-height: 35px;
+    text-align: center;
+    border-bottom:2px solid $orange;
+    @include com.transition(0.5s);
+
+}
+ul#menu-ul > li.dropdown + div{
+    display: none;
+    a{
+        border-bottom:2px solid $orange;
+        min-height:35px;
+        background-color: $light-grey ;
+    }
+    a:active{
+        background-color: rgba(214,90,49,0.5);
+    }
+}
+div.search-container{
+    position: relative;
+    margin-top: 30px;
+    height: 25px;
+    width: 100%;
+    input[type=search]{
+        display: inline-block;
+        position: absolute;
+        bottom:0;
+        right: 0;
+        height: 25px;
+        border: 2px $green solid;
+        border-radius: 0px 4px 4px 0px;
+        outline-width: 0;
+        @include com.transition(0.5s);
+
+    }
+    input:focus{
+        outline: 2px $white solid ;
+    }
+    button#search-btn{
+        cursor: pointer;
+        position: absolute;
+        border:none;
+        left:0;
+        bottom:0;
+        height: 25px;
+        overflow: hidden;
+        text-decoration: none;
+        outline:none;
+        display: inline-block;
+        width: 20%;
+        background-color: $green;
+        border-radius: 4px 0px 0px 4px;
+        @include com.transition(0.5s);
+        text-align: center;
+        //vertical-align: bottom;
+        i{
+            height: 18px;
+            width: 18px;
+            font-size: 18px;
+        }
+    }
+    input:focus ~ button#search-btn{
+        background-color: $dgreen;
+    }
+    button#search-btn:active{
+        background-color: $dgreen;
+    }
+}
+div.container{
+    > div#header{
+        margin-bottom: 20px;
+
+        h2{
+            margin:0;
+            @include com.userselect(none);
+        }
+    }
+}
+div.grid-container{
+    div.grid-item{
+        padding: 5px;
+    }
+}
+div.card{
+    overflow : auto;
+    background-color: $grey;
+    cursor: pointer;
+    div.card-header{
+        color: $white;
+        background-color: $dgreen;
+        height: 50px;
+        width: 100%;
+        display: table;
+        text-align: center;
+        font-size: 0.8em;
+    }
+    img.card-profile-pic{
+        float:left;
+        margin: 10px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 4px $dgreen solid;
+    }
+    div.card-content{
+        padding:15px;
+        font-size: 17px;
+
+    }
+    div.card-footer{
+        padding:5px;
+        border-top: 2px $orange solid;
+        color: rgba($color: $white, $alpha: 0.7);
+        font-size: 0.6em;
+    }
+}
+div.card:hover{
+    outline: 1px $white solid;
+}
+div.card:focus{
+    background-color: $grey;
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width:768px){ //applies to screens with 480px and greater width(tablets)
+    div#menu{
+        a:hover{
+            @include com.transition(0s !important); 
+            border-right: 3px $orange solid;
+            border-left: 3px $orange solid;
+            /*
+            background-image: 
+            linear-gradient(to left,$orange 1%,rgba(0,0,0,0) 1%,99%,$orange 99%);
+            */
+        }
+        a:active{
+            @include com.transition(0s !important);
+        }
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

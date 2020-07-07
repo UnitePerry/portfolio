@@ -1,0 +1,331 @@
+[class*=col-] {
+  width: 100%;
+  float: left;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 480px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+
+  .col-s-2 {
+    width: 16.66%;
+  }
+
+  .col-s-3 {
+    width: 25%;
+  }
+
+  .col-s-4 {
+    width: 33.33%;
+  }
+
+  .col-s-5 {
+    width: 41.66%;
+  }
+
+  .col-s-6 {
+    width: 50%;
+  }
+
+  .col-s-7 {
+    width: 58.33%;
+  }
+
+  .col-s-8 {
+    width: 66.66%;
+  }
+
+  .col-s-9 {
+    width: 75%;
+  }
+
+  .col-s-10 {
+    width: 83.33%;
+  }
+
+  .col-s-11 {
+    width: 91.66%;
+  }
+
+  .col-s-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-m-1 {
+    width: 8.33%;
+  }
+
+  .col-m-2 {
+    width: 16.66%;
+  }
+
+  .col-m-3 {
+    width: 25%;
+  }
+
+  .col-m-4 {
+    width: 33.33%;
+  }
+
+  .col-m-5 {
+    width: 41.66%;
+  }
+
+  .col-m-6 {
+    width: 50%;
+  }
+
+  .col-m-7 {
+    width: 58.33%;
+  }
+
+  .col-m-8 {
+    width: 66.66%;
+  }
+
+  .col-m-9 {
+    width: 75%;
+  }
+
+  .col-m-10 {
+    width: 83.33%;
+  }
+
+  .col-m-11 {
+    width: 91.66%;
+  }
+
+  .col-m-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2 {
+    width: 16.66%;
+  }
+
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.33%;
+  }
+
+  .col-5 {
+    width: 41.66%;
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-7 {
+    width: 58.33%;
+  }
+
+  .col-8 {
+    width: 66.66%;
+  }
+
+  .col-9 {
+    width: 75%;
+  }
+
+  .col-10 {
+    width: 83.33%;
+  }
+
+  .col-11 {
+    width: 91.66%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .col-lg-1 {
+    width: 8.33%;
+  }
+
+  .col-lg-2 {
+    width: 16.66%;
+  }
+
+  .col-lg-3 {
+    width: 25%;
+  }
+
+  .col-lg-4 {
+    width: 33.33%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  .col-lg-8 {
+    width: 66.66%;
+  }
+
+  .col-lg-9 {
+    width: 75%;
+  }
+
+  .col-lg-10 {
+    width: 83.33%;
+  }
+
+  .col-lg-11 {
+    width: 91.66%;
+  }
+
+  .col-lg-12 {
+    width: 100%;
+  }
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.centered-text-container {
+  display: table;
+  text-align: center;
+}
+
+.centered-text {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.modal {
+  position: fixed !important;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  padding: 0 !important;
+  width: 100vw;
+  -webkit-transform: translate3d(-50%, calc(-50% - 0.5px), 0);
+  transform: translate3d(-50%, calc(-50% - 0.5px), 0);
+  overflow: auto;
+  text-decoration: none;
+  outline: none;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.modal:active, .modal:focus {
+  background-color: #393e46;
+}
+
+.modal::-webkit-scrollbar-track {
+  background-color: #393e46;
+}
+
+.modal::-webkit-scrollbar {
+  width: 9px;
+  background-color: #F5F5F5;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), 20%, #d65a31, 80%, rgba(0, 0, 0, 0));
+}
+
+a.info-btn, button.info-btn {
+  cursor: pointer;
+  border: none;
+  height: 25px;
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 100px;
+  background-color: #32e0c4;
+  border-radius: 4px 0px 0px 4px;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+}
+a.info-btn i, button.info-btn i {
+  height: 18px;
+  width: 18px;
+  font-size: 18px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #222831;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: linear-gradient(#2aa08c, #32e0c4);
+}
+
+div#overlay {
+  position: fixed;
+  /* Sit on top of the page content */
+  display: none;
+  /* Hidden by default */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Black background with opacity */
+  z-index: 1;
+  /* Specify a stack order in case you're using a different order for other elements */
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,24 @@
+@mixin userselect($property) {
+    //user-select: auto|none|text|all;
+    -webkit-touch-callout: $property; /* iOS Safari */
+    -webkit-user-select: $property; /* Safari */
+    -khtml-user-select: $property; /* Konqueror HTML */
+    -moz-user-select: $property; /* Old versions of Firefox */
+    -ms-user-select: $property; /* Internet Explorer/Edge */
+    user-select: $property; /* Non-prefixed version, currently
+                        supported by Chrome, Edge, Opera and Firefox */
+}
+
+@mixin transition($property) {
+    //transition: property duration timing-function delay|initial|inherit
+    -o-transition : $property;
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    transition: $property;
+}
+@mixin boxshadow($property) {
+    //box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;
+    -webkit-box-shadow: $property;
+    -moz-box-shadow: $property;
+    box-shadow: $property;
+}
