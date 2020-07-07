@@ -1,1 +1,0 @@
-iss 1: text in chrome gets blurry because of translation property on div.grid-item.
