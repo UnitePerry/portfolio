@@ -100,9 +100,10 @@ $dgreen: #2aa08c;
     z-index:2;
     padding: 0 !important;
     width : 100vw;
-    -webkit-transform: translate3d(-50%,calc(-50% - 0.5px),0);
-    transform : translate3d(-50%,calc(-50% - 0.5px),0);
-    //subtracting 0.5 px to fix the bug in chrome:
+    -webkit-transform: translate(-50%,calc(-50% ));
+    transform : translate(-50%,calc(-50% ));
+    filter: blur(0.0000000001);
+    //iss1:add blurr to fix the bug in chrome:
     // https://stackoverflow.com/questions/27385126/chrome-font-appears-blurry
     overflow: auto;
     text-decoration: none;

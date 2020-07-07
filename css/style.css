@@ -236,8 +236,9 @@
   z-index: 2;
   padding: 0 !important;
   width: 100vw;
-  -webkit-transform: translate3d(-50%, calc(-50% - 0.5px), 0);
-  transform: translate3d(-50%, calc(-50% - 0.5px), 0);
+  -webkit-transform: translate(-50%, calc(-50% ));
+  transform: translate(-50%, calc(-50% ));
+  filter: blur(1e-10);
   overflow: auto;
   text-decoration: none;
   outline: none;
